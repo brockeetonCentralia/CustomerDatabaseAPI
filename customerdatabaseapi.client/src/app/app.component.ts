@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
+import { Customer } from './Customer';
+import { CustomerInfoService } from './customer-info.service';
 
 
 @Component({
@@ -9,8 +11,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent {
 
-
-  constructor(private http: HttpClient) { }
+  customerList: Customer[] = [];
+  constructor(private http: HttpClient, private service: CustomerInfoService) { }
 
   title = 'customerdatabaseapi.client';
 }

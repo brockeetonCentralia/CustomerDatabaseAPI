@@ -14,7 +14,7 @@ export class CustomerInfoComponent implements OnInit {
   constructor(private http: HttpClient, private service: CustomerInfoService) { }
 
   ngOnInit() {
-    this.customerList.getAllCustomers().subscribe(data => {
+    this.service.getAllCustomers().subscribe((data: Customer[]) => {
       this.customerList = data;
     });
   }
