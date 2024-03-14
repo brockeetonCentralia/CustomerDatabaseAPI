@@ -1,32 +1,25 @@
-<form class="customer-form" [formGroup]="customerForm">
-  <label>Task:</label>
-  <input type="text" formControlName="description" />
-  <label>Completed?</label>
-  <input type="checkbox" formControlName="completed" />
 
-  <button (click)="onSubmit()">Submit</button>
-</form>
 <!-- finish form here  -->
-<form [formGroup]="newProjectForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="customerForm" (ngSubmit)="onSubmit()">
   <div class="input-group mb-2">
-    <span class="input-group-text">Name</span>
-    <input type="text" class="form-control" formControlName="name" />
+    <span class="input-group-text">First Name</span>
+    <input type="text" class="form-control" formControlName="firstname" />
   </div>
   <div class="input-group mb-2">
-    <span class="input-group-text">Description</span>
-    <input type="text" class="form-control" formControlName="description">
+    <span class="input-group-text">Last Name</span>
+    <input type="text" class="form-control" formControlName="lastname">
   </div>
   <div class="input-group mb-2">
-    <span class="input-group-text">Start Date</span>
-    <input type="text" class="form-control" formControlName="startdate">
+    <span class="input-group-text">Phone Number</span>
+    <input type="text" class="form-control" formControlName="phonenumber">
   </div>
   <div class="input-group mb-2">
-    <span class="input-group-text">Version</span>
-    <input type="text" class="form-control" formControlName="version">
+    <span class="input-group-text">Address</span>
+    <input type="text" class="form-control" formControlName="address">
   </div>
   <div class="input-group mb-2">
-    <span class="input-group-text">Url</span>
-    <input type="text" class="form-control" formControlName="url">
+    <span class="input-group-text">Email</span>
+    <input type="text" class="form-control" formControlName="email">
   </div>
   <input type="submit" class="btn btn-primary">
 </form>

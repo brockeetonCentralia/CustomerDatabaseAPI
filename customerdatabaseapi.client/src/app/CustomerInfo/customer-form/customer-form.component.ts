@@ -34,9 +34,9 @@ export class CustomerFormComponent implements OnInit {
 
     let customer: Customer = {
       customerId: 0,
-      firstname: this.customerForm.get('firstName')?.value,
-      lastname: this.customerForm.get('lastName')?.value,
-      phonenumber: this.customerForm.get('phoneNumber')?.value,
+      firstName: this.customerForm.get('firstName')?.value,
+      lastName: this.customerForm.get('lastName')?.value,
+      phoneNumber: this.customerForm.get('phoneNumber')?.value,
       address: this.customerForm.get('address')?.value,
       email: this.customerForm.get('email')?.value,
 
