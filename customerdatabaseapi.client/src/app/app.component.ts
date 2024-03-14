@@ -11,8 +11,9 @@ import { CustomerInfoService } from './customer-info.service';
 })
 export class AppComponent {
 
-  customerList: Customer[] = [];
   constructor(private http: HttpClient, private service: CustomerInfoService) { }
+
+
 
   title = 'customerdatabaseapi.client';
 }

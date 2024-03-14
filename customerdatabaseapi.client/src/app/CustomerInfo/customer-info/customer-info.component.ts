@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CustomerInfoService } from '../../customer-info.service';
 import { Customer } from '../../Customer';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-customer-info',
@@ -11,11 +12,12 @@ import { Customer } from '../../Customer';
 export class CustomerInfoComponent implements OnInit {
 
   customerList: Customer[] = [];
-  constructor(private http: HttpClient, private service: CustomerInfoService) { }
+
+  customers: Subject<Customer[]> = this.customer.customersAll;
+  constructor(private customer: CustomerInfoService) { }
 
   ngOnInit() {
-    this.service.getAllCustomers().subscribe((data: Customer[]) => {
-      this.customerList = data;
-    });
+    this.customer.getAllCustomers();
   }
+
 }

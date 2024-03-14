@@ -1,2 +1,2 @@
-<app-customer-info *ngFor="let service of customerList"></app-customer-info>
-<pre> {{ customerList | json }}</pre>
+<pre> {{ customers | async | json }}</pre>
+<app-customer-form></app-customer-form>
