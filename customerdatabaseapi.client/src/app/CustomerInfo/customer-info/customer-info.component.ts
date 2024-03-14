@@ -9,15 +9,20 @@ import { Subject } from 'rxjs';
   templateUrl: './customer-info.component.html',
   styleUrl: './customer-info.component.css'
 })
-export class CustomerInfoComponent implements OnInit {
-
-  customerList: Customer[] = [];
-
-  customers: Subject<Customer[]> = this.customer.customersAll;
-  constructor(private customer: CustomerInfoService) { }
-
-  ngOnInit() {
-    this.customer.getAllCustomers();
+export class CustomerInfoComponent {
+  @Input() customer: Customer = {
+    customerId: 0,
+    firstName: '',
+    lastName: '',
+    phoneNumber: '',
+    address: '',
+    email: ''
   }
+
+  constructor(private data: CustomerInfoService) {
+
+  }
+
+  
 
 }

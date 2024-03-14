@@ -1,2 +1,9 @@
-<pre> {{ customers | async | json }}</pre>
-<app-customer-form></app-customer-form>
+<!-- Make Look pretty -->
+<div class="container border p-3">
+  <div class="firstName row border"> <strong>First Name</strong> {{ customer.firstName }}</div>
+  <div class="lastName row border"> <strong>Last Name</strong> {{ customer.lastName }}</div>
+  <div class="phoneNumber row border"><strong>Phone Number</strong> {{ customer.phoneNumber }}</div>
+  <div class="address row border"><strong>Address</strong>{{ customer.address }}</div>
+  <div class="email row border"><strong>Email</strong>{{ customer.email }}</div>
+</div>
+
