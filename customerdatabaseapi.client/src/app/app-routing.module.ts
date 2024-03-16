@@ -2,10 +2,13 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CustomerFormComponent } from './CustomerInfo/customer-form/customer-form.component';
 import { AppComponent } from './app.component';
+import { CustomerInfoComponent } from './CustomerInfo/customer-info/customer-info.component';
 
-const routes: Routes = [
-  { path: '', component: AppComponent, pathMatch: 'full' },
-  { path: 'customer/new', component: CustomerFormComponent, pathMatch: 'full' }
+
+export const routes: Routes = [
+  { path: '', component: AppComponent },
+  { path: 'customer/list', component: CustomerInfoComponent },
+  { path: 'customer/new', component: CustomerFormComponent }
 ];
 
 @NgModule({

@@ -1,14 +1,16 @@
 
-<!-- not working -->
-<!--<a class="btn btn-secondary" [routerLink]="['/customer/new']">Add a New Customer</a>-->
+
+<a class="btn btn-secondary" routerLink="/customer/new">Add a New Customer</a>
 
 <div class="list">
   <app-customer-info *ngFor="let customer of customers | async" [customer]="customer"></app-customer-info>
 </div>
 
 
-<app-customer-form></app-customer-form>
+<!--<app-customer-form></app-customer-form>-->
 
 
-<h3>For some reason I cant get the firstname lastnmae or phonenumber to input into the database</h3>
+
 <pre> {{ customers | async | json }}</pre>
+
+<router-outlet></router-outlet>
