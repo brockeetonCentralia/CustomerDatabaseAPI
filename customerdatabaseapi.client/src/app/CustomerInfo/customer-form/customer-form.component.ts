@@ -42,6 +42,7 @@ export class CustomerFormComponent implements OnInit {
 
     }
     this.data.createCustomer(customer);
+    this.customerForm.reset();
   }
 
 }

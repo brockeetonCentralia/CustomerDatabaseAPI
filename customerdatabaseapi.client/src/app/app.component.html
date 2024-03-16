@@ -1,6 +1,7 @@
 
 
-<a class="btn btn-secondary" routerLink="/customer/new">Add a New Customer</a>
+<a class="btn btn-secondary" routerLink="/customer/new">Add New Customer</a>
+<!--<router-outlet></router-outlet>-->
 
 <div class="list">
   <app-customer-info *ngFor="let customer of customers | async" [customer]="customer"></app-customer-info>
@@ -8,9 +9,3 @@
 
 
 <!--<app-customer-form></app-customer-form>-->
-
-
-
-<pre> {{ customers | async | json }}</pre>
-
-<router-outlet></router-outlet>
