@@ -1,9 +1,24 @@
-<!-- Make Look pretty -->
-<div class="container border p-3">
-  <div class="firstName row border"> <strong>First Name</strong> {{ customer.firstName }}</div>
-  <div class="lastName row border"> <strong>Last Name</strong> {{ customer.lastName }}</div>
-  <div class="phoneNumber row border"><strong>Phone Number</strong> {{ customer.phoneNumber }}</div>
-  <div class="address row border"><strong>Address</strong>{{ customer.address }}</div>
-  <div class="email row border"><strong>Email</strong>{{ customer.email }}</div>
-</div>
 
+<div class="customerList container">
+  <div class=" row pb-1">
+    <div class=" col">
+      <div class="firstName"> <strong>First Name:</strong> {{ customer.firstName }}</div>
+    </div>
+    <div class=" col">
+      <div class="lastName"> <strong>Last Name:</strong> {{ customer.lastName }}</div>
+    </div>
+  </div>
+  <div class=" row pb-1">
+    <div class=" col">
+      <div class="phoneNumber"><strong>Phone Number:</strong> {{ customer.phoneNumber }}</div>
+    </div>
+    <div class=" col">
+      <div class="address"><strong>Address:</strong> {{ customer.address }} </div>
+    </div>
+  </div>
+  <div class=" row pb-1">
+    <div class=" col">
+      <div class="email"><strong>Email:</strong> {{ customer.email }} </div>
+    </div>
+  </div>
+</div>

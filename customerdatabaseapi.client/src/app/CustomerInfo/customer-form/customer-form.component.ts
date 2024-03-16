@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { Customer } from '../../Customer';
 import { CustomerInfoService } from '../../customer-info.service';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -21,7 +22,7 @@ export class CustomerFormComponent implements OnInit {
 
   });
 
-  constructor(private fb: FormBuilder, private data: CustomerInfoService) {
+  constructor(private fb: FormBuilder, private data: CustomerInfoService, private router: Router) {
 
   }
 
@@ -43,6 +44,7 @@ export class CustomerFormComponent implements OnInit {
     }
     this.data.createCustomer(customer);
     this.customerForm.reset();
+    this.router.navigate(['']);
   }
 
 }
