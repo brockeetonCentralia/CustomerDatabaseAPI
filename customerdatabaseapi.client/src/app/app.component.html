@@ -1,13 +1,15 @@
 <!--<div (ngSubmit)="onSubmit()">
   <input type="submit" class="btn btn-primary m-3">
 </div>-->
+<div class="content">
+  <a class="btn btn-success" routerLink="/customer/new">Add New Customer</a>
+  <router-outlet></router-outlet>
 
-<a class="btn btn-success" routerLink="/customer/new">Add New Customer</a>
-<router-outlet></router-outlet>
-
-<div class="list">
-  <app-customer-info *ngFor="let customer of customers | async" [customer]="customer"></app-customer-info>
+  <div class="list">
+    <app-customer-info *ngFor="let customer of customers | async" [customer]="customer"></app-customer-info>
+  </div>
 </div>
+
 
 
 <!--<app-customer-form></app-customer-form>-->
