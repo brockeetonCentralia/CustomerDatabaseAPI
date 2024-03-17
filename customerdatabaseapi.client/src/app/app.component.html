@@ -1,11 +1,12 @@
 <!--<div (ngSubmit)="onSubmit()">
   <input type="submit" class="btn btn-primary m-3">
 </div>-->
-<div class="content">
-  <a class="btn btn-success" routerLink="/customer/new">Add New Customer</a>
+<div class="content row">
+  <a class="btn btn-success col-2" routerLink="/customer/new">Add New Customer</a>
+
   <router-outlet></router-outlet>
 
-  <div class="list">
+  <div class="list col">
     <app-customer-info *ngFor="let customer of customers | async" [customer]="customer"></app-customer-info>
   </div>
 </div>
