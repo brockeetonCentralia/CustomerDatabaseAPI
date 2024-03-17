@@ -30,7 +30,7 @@ export class CustomerFormComponent implements OnInit {
 
   }
 
-  onSubmit() {
+  onSubmit(event: Event) {
     console.log(this.customerForm.value);
 
     let customer: Customer = {
@@ -45,6 +45,18 @@ export class CustomerFormComponent implements OnInit {
     this.data.createCustomer(customer);
     this.customerForm.reset();
     this.router.navigate(['']);
+
+    event.preventDefault()
+    if (this.customerForm.valid == true) {
+      alert("Customer Added Successfully")
+    }
+    else {
+      alert("Error Adding Customer")
+    }
+
   }
+
+  
+
 
 }

@@ -1,6 +1,6 @@
 
 
-<form class="m-3 container" [formGroup]="customerForm" (ngSubmit)="onSubmit()">
+<form class="m-3 container" [formGroup]="customerForm" (ngSubmit)="onSubmit($event)">
   <h2 class="m-2"> Add New Customer</h2>
   <div class="input-group m-3">
     <span class="input-group-text">First Name</span>
